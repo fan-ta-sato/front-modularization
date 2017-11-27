@@ -1,0 +1,27 @@
+{
+  "env": {
+    "webadmin": {
+      "presets": [
+        ["minify"],
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 versions", "safari 7"]
+          }
+        }]
+      ]
+    },
+    "delivery": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["android >= 4.3", "ios >= 6.2"]
+          }
+        }]
+      ],
+      "plugins": [
+        "transform-es3-member-expression-literals",
+        "transform-es3-property-literals"
+      ]
+    },
+  }
+}
