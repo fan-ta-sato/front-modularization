@@ -1,8 +1,15 @@
 {
+  "plugins": [
+    "check-es2015-constants",
+    "transform-es2015-arrow-functions",
+    "transform-es2015-computed-properties"
+  ],
   "env": {
+    "production": {
+      "presets": ["minify"]
+    },
     "webadmin": {
       "presets": [
-        ["minify"],
         ["env", {
           "targets": {
             "browsers": ["last 2 versions", "safari 7"]
@@ -19,9 +26,10 @@
         }]
       ],
       "plugins": [
-        "transform-es3-member-expression-literals",
-        "transform-es3-property-literals"
+        "transform-es5-property-mutators",
+        "transform-es3-property-literals",
+        "transform-es3-member-expression-literals"
       ]
-    },
+    }
   }
 }

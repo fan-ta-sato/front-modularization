@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-// const MinifyPlugin = require("babel-minify-webpack-plugin");
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const ES5to3OutputPlugin = require("es5to3-webpack-plugin");
 
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
 
 
   // ソースマップを有効にする
-  devtool: 'source-map',
+  // devtool: 'source-map',
 
   // ローカル開発用環境を立ち上げる
   // ブラウザで http://localhost:8081/ でアクセスできるようになる
@@ -41,14 +41,13 @@ module.exports = {
 
   plugins: [
     // Babel公式
-    // エラーになる
-    // new MinifyPlugin()
+    // new MinifyPlugin(),
     // // JSファイルのminifyを実行する
     // new webpack.optimize.UglifyJsPlugin({
     //   // minify時でもソースマップを利用する
     //   sourceMap: true
     // }),
-    // // ES5 -> ES3
+    // ES5 -> ES3
     // new ES5to3OutputPlugin(),
   ]
 };
